@@ -135,8 +135,7 @@ if __name__ == "__main__":
     # Remove μb from the accumulations
     acc -= ub * (ends - starts)
 
-    # Select eveything under the Lc (guaranteed non-detection)
-    # Note for David: This will miss a few points but will work fine.
+    # Select eveything under the Lc (non-detections)
     mask = y < lc
     nd_mean = np.mean(y[mask])  # Mean of the background without detections
 
